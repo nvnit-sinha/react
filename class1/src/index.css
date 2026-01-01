@@ -1,0 +1,21 @@
+* {
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    font-family: system-ui;
+}
+ 
+html,body{
+   height: 100%;
+   width:100%;
+}
+
+.nav{
+  background-color: aquamarine;
+  padding: 20px;
+}
+
+.footer{
+  padding: 20px;
+  background-color: blanchedalmond;
+}
