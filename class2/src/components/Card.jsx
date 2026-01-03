@@ -9,7 +9,7 @@ const Card = (props) => {
         <div className='absolute bottom-1.5 p-4 flex flex-col gap-2 bg-transparent' >
             <h1 className='text-white px-3'>{props.name} <i class="ri-verified-badge-fill text-blue-800"></i></h1>
 
-            <p className='text-white px-3 leading-5'>{props.slogan}</p>
+            <p className='text-white px-3 leading-5 line-clamp-1 hover:line-clamp-none'>{props.slogan}</p>
 
             <div className='text-white flex justify-between items-center px-3 leading-5'>
                 <div>
