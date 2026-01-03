@@ -2,7 +2,7 @@ import React from 'react'
 
 const Card = (props) => {
   return (
-    <div className='bg-gray-300 h-111 w-70 rounded-3xl relative'>
+    <div className='bg-gray-300 h-111 w-70 rounded-3xl relative hover:scale-110 transition-all ease-in-out'>
 
         <img className='h-111 w-100 p-2 object-cover rounded-3xl' src={props.img} alt="" />
 
@@ -29,11 +29,11 @@ const Card = (props) => {
                 </div>
             </div>
             <div className='flex gap-8 mt-1'>
-                    <div className='flex gap-1  bg-white text-gray-600 w-fit rounded-3xl px-10 py-0.5'>
+                    <div className='flex gap-1  bg-white text-gray-600 w-fit rounded-3xl px-10 py-0.5 active:bg-transparent hover:cursor-none transition-all'>
                     <i class="ri-mail-line"></i>
                     <span>Get in Touch</span>
                     </div>
-                    <h3 className='rounded-xl px-1 bg-gray-400'><i class="ri-bookmark-line text-white"></i></h3>
+                    <h3 className='rounded-xl px-1 bg-gray-400 active:scale-200 cursor-pointer transition-all'><i class="ri-bookmark-line text-white"></i></h3>
             </div>
 
         </div>
