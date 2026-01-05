@@ -1,12 +1,27 @@
-import React from 'react'
-import { useState } from 'react'
+import React, { useState } from 'react'
 
 const App = () => {
+  const mark = [45,56,76,20,28]
+  const [marks, setMarks] = useState(mark)  
 
-  const [first, setfirst] = useState(second)
+  function graceStudent(){
+    const grace = marks.map((elem)=>{
+      return elem+5>100?100:elem+5;
+    })
+    setMarks(grace);
+  }
 
   return (
-    <div>
+    <div className='p-3 text-3xl'>
+      {
+        marks.map((elem,idx)=>{
+          return <h1 key={idx}>Student {idx+1} = {elem} ({elem>=33?'PASS':'FAIL'}) </h1>
+        })
+      }
+
+      <button onClick={graceStudent} 
+      className='bg-emerald-600 active:scale-95 mt-3 w-fit px-5 py-2 text-3xl cursor-pointer  rounded'>
+      Give them grace</button>
     </div>
   )
 }
