@@ -3,17 +3,19 @@ import React, { useState } from 'react'
 const App = () => {
 
   const [title, setTitle] = useState('')
+  const [email, setEmail] = useState('')
   const [allUsers, setAllUsers] = useState([])
 
   function submitHandler(e){
     e.preventDefault();
 
     const oldUsers = [...allUsers]
-    oldUsers.push(title)
+    oldUsers.push({title,email})
 
     setAllUsers(oldUsers)
 
     setTitle('')
+    setEmail('')
   }
 
   return (
@@ -34,11 +36,25 @@ const App = () => {
           setTitle(e.target.value)
         }}
          />
+
+        <input 
+        type="text" 
+        className='w-fit px-2 py-1'
+        placeholder='Enter your email' 
+        value={email}
+        required
+        onChange={(e)=>{
+          setEmail(e.target.value)
+        }}
+         />
         <button className='bg-gray-600 px-2 w-fit mt-3 rounded py-1'>Submit</button>
       </form>
       {
         allUsers.map((elem,idx)=>{
-          return <h2 key={idx}>{elem}</h2>
+          return <div key={idx} > 
+          <h4>{elem.title}</h4>
+          <h4>{elem.email}</h4>
+          </div>
         })
       }
     </div>
