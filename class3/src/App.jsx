@@ -20,10 +20,10 @@ const App = () => {
       }
 
       <button onClick={graceStudent} 
-      className='bg-emerald-600 active:scale-90 mt-3 w-fit px-4 py-2 text-2xl cursor-pointer rounded'>
+      className='bg-emerald-500 active:scale-90 mt-3 w-fit px-4 py-2 text-2xl cursor-pointer rounded'>
       Give them grace</button>
     </div>
-  )
+  )       
 }
 
 export default App
