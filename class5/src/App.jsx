@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import Card from './components/Card';
 
 const App = () => {
+
+  localStorage.setItem('user','Harshit')
   const [formData, setformData] = useState({name: '', image:'', role:'',desc:''});
   const [users, setUsers] = useState([])
   const changeHandler = (e) => {
