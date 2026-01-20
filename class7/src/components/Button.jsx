@@ -2,12 +2,12 @@
 const Button = ({children, onClick, variant = "primary"}) => {
   
   const styles = {
-    primary : "bg-emerald-600",
-    danger : "bg-red-600"
+    primary : "bg-emerald-800 hover:bg-emerald-900 px-34",
+    danger : "bg-red-800 hover:bg-red-900 px-26 md:px-24"
   }
 
   return (
-      <button className={`text-5xl cursor-pointer m-2 rounded md:px-4 md:py-1 md:text-2xl px-6 py-3 mt-3 ${styles[variant]}`} onClick={onClick}>{children} </button>
+      <button className={`text-5xl cursor-pointer rounded md:px-12 md:py-1 md:text-2xl  py-3 mt-3 ${styles[variant]}`} onClick={onClick}>{children} </button>
   )
 }
 
