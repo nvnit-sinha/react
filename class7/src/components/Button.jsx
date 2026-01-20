@@ -7,7 +7,7 @@ const Button = ({children, onClick, variant = "primary"}) => {
   }
 
   return (
-      <button className={`text-2xl cursor-pointer m-2 rounded px-4 py-1 mt-3 ${styles[variant]}`} onClick={onClick}>{children} </button>
+      <button className={`text-5xl cursor-pointer m-2 rounded md:px-4 md:py-1 md:text-2xl px-6 py-3 mt-3 ${styles[variant]}`} onClick={onClick}>{children} </button>
   )
 }
 
